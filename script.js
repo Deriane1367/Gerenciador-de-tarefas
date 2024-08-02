@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const taskList = document.getElementById('task-list');
     const message = document.getElementById('message');
 
-    // Initialize flatpickr
+    
     flatpickr(taskDate, {
         enableTime: true,
         dateFormat: "Y-m-d H:i",
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         altFormat: "F j, Y h:i K"
     });
 
-    // Load tasks from localStorage
+    
     loadTasks();
 
     toggleDescBtn.addEventListener('click', function() {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const li = createTaskElement(task);
             taskList.appendChild(li);
 
-            // Save task to localStorage
+           
             saveTask(task);
 
             // Exibir mensagem de confirmação
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         deleteBtn.textContent = 'X';
         deleteBtn.addEventListener('click', function() {
             taskList.removeChild(li);
-            // Remove task from localStorage
+           
             deleteTask(task);
         });
         li.appendChild(deleteBtn);
